@@ -1,0 +1,21 @@
+oscilloscope
+============
+
+Simple Arduino oscilloscope software to examine low-frequency (0.5-1kHz tops) periodic signals. Works only under GNU/Linux. Code is hardcoded to work with the arduino duemilanove board, but it may work just right for other models. Under debian, it requires the following packages:
+- arduino-core
+- arduino-mk
+- python-serial
+- python-numpy
+- python-scipy
+- python-matplotlib
+
+To build the firmware and upload it to the arduino board, issue the following commands:
+$ make
+$ make upload
+
+To check a periodic signal start the python script:
+$ python periodic_signal_display.py
+
+To read any other signal, use the Oscilloscope.read() method. It returns pairs of (time, readout).
+
+For more information, visit: http://blog.debiatan.net/oscilloscope.html
