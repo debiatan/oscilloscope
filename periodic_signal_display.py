@@ -46,7 +46,7 @@ array_data = np.zeros((n_blocks_per_update, samples_per_cycle))
 pos = 0
 i_plot = 0
 pl.ion()
-xs = np.arange(0, samples_per_cycle/freq, 1/freq)
+xs = np.arange(0, 1/freq, (1/freq)/samples_per_cycle)
 plot = pl.plot(xs, np.zeros(samples_per_cycle), linewidth=1)[0]
 pl.xlim(xs.min(), xs.max())
 
